@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "8f32119c-efba-440e-850a-bda27e3565ce",
+		"name": "ApiGestionCliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26585084"
+	},
+	"item": [
+		{
+			"name": "Crear_autorizado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "autorizado",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rut\": \"7.867.789-k\",\r\n  \"nombre\": \"Ninoska\",\r\n  \"apePaterno\": \"Navorish\",\r\n  \"apeMaterno\": \"Haroske\",\r\n  \"email\": \"ninoska@gmail.com\",\r\n  \"celular\": \"+56 9 97035764\",\r\n  \"empresa\": \"Sistemas Orion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_no_autorizado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"rut\": \"7.867.789-k\",\r\n  \"nombre\": \"Ninoska\",\r\n  \"apePaterno\": \"Navorish\",\r\n  \"apeMaterno\": \"Haroske\",\r\n  \"email\": \"ninoska@gmail.com\",\r\n  \"celular\": \"+56 9 97035764\",\r\n  \"empresa\": \"Sistemas Orion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/get",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar_por_id_param_ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/get/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"get",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar_por_id_param_bad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/get/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"get",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "autorizado",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rut\": \"3.457.956-k\",\r\n  \"nombre\": \"Jaime\",\r\n  \"apePaterno\": \"Perez\",\r\n  \"apeMaterno\": \"Perez\",\r\n  \"email\": \"Jaime@gmail.com\",\r\n  \"celular\": \"+56 9 97356715\",\r\n  \"empresa\": \"Condominion platon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7063/apiGesClient/update/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7063",
+					"path": [
+						"apiGesClient",
+						"update",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
